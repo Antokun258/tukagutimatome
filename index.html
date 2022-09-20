@@ -1,0 +1,61 @@
+<html>
+  <div style="background-color:#00b3ff">
+    <h1><font color="white">塚口駅発</font></h1>
+    <h2><font color="white">西宮北口・神戸三宮方面時刻表(通学時)</font></h2>
+  </div>
+  <body>
+    <table border="5" bordercolor="#0f5aa4">
+        <body>
+            <tr>
+                <td>
+            <p id="Clock1" style="display: inline"></p>
+    <script type="text/javascript">
+    setInterval('showClock1()',1000);
+    function showClock1() {
+    var DWs = new Array('日','月','火','水','木','金','土');
+    var Now = new Date();
+    var YY = Now.getYear();
+    if (YY < 2000) { YY += 1900; }
+    var MM = set0( Now.getMonth() + 1 );
+    var DD = set0( Now.getDate() );
+    var DW = DWs[ Now.getDay() ];
+    var RTime1 = '今日は' + YY + '年' + MM + '月' + DD + '日' + DW +'曜日';
+    document.getElementById("Clock1").innerHTML = RTime1;
+    }
+    function set0(num) {
+    var ret;
+    if( num < 10 ) { ret = "0" + num; }
+    else { ret = num; }
+    return ret;
+    }
+    </script>
+                </td>
+            </tr>
+    </body>
+    </table>
+</body>
+  <body>
+    <div>
+      <div style="float: left">
+        <style>
+           button.horizontal {
+            padding-left: 23em;
+            padding-right: 23em;
+            height: 5em;
+          }
+          </style>
+          <button  style="background-color:#0080ff; border-color:#c0c0c0; color:#fff" onclick="onclick=location.href='https://antokun258.github.io/heitukaguti/'"  class="horizontal">平日</button>
+      </div>
+      <div style="text-align: right">
+      <style>
+         button.horizontal {
+          padding-left: 23em;
+          padding-right: 23em;
+          height: 5em;
+        }
+        </style>
+        <button  style="background-color:#ff006a; border-color:#c0c0c0; color:#fff" onclick="onclick=location.href='https://antokun258.github.io/kyuutukaguti/'"  class="horizontal">土日祝</button>
+      </div>
+  </div>
+  </body>
+</html>
